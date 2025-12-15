@@ -22,14 +22,15 @@ function App() {
 
 
 
-
+  
+  
 
   return (
     <>
       <header className='bg-warning py-2'><div className='container'> <h1>Lista Attori</h1></div></header>
 
 
-      <div className="container text-center" style={{position:"relative"}}>
+      <div className="container text-center" style={{ position: "relative" }}>
         <div className="row">
 
 
@@ -39,13 +40,6 @@ function App() {
                 <img src={oggetto.image} className="card-img-top" alt="{oggetto.name}" />
                 <div className="card-body">
                   <h5 className="card-title">{oggetto.name}</h5>
-                  <p className="card-text">{oggetto.birth_year}</p>
-                  <p className="card-text">{oggetto.nationality}</p>
-                  <p className="card-text">{oggetto.biography}</p>
-                  <p className="card-text">{oggetto.awards}</p>
-
-
-
                 </div>
               </div>
             </div>
@@ -60,21 +54,21 @@ function App() {
 
       {selectedCard !== null ? (
         <>
-          <div style={{ backgroundColor: "black", width: "100vw", height: "100vh", zIndex: "1000", opacity:"0.9", position:"fixed", top:0, display:"flex", justifyContent:"center", alignItems:"center"}}   onClick={() => setSelectedCard(null)}>
+          <div style={{ backgroundColor: "black", width: "100vw", height: "100vh", zIndex: "1000", opacity: "0.9", position: "fixed", top: 0, display: "flex", justifyContent: "center", alignItems: "center" }} onClick={() => setSelectedCard(null)}>
 
-                <div className="card" style={{ width: "18rem", zIndex:"1001" }}> 
-                <img src={selectedCard.image} className="card-img-top" alt="{oggetto.name}" />
-                <div className="card-body">
-                  <h5 className="card-title">{selectedCard.name}</h5>
-                  <p className="card-text">{selectedCard.birth_year}</p>
-                  <p className="card-text">{selectedCard.nationality}</p>
-                  <p className="card-text">{selectedCard.biography}</p>
-                  <p className="card-text">{selectedCard.awards}</p>
+            <div className="card" style={{ width: "18rem", zIndex: "1001" }}>
+              <img src={selectedCard.image} className="card-img-top" alt="{oggetto.name}" />
+              <div className="card-body">
+                <h5 className="card-title">{selectedCard.name}</h5>
+                <p className="card-text">{selectedCard.birth_year}</p>
+                <p className="card-text">{selectedCard.nationality}</p>
+                <p className="card-text">{selectedCard.biography}</p>
+                <p className="card-text">{selectedCard.awards}</p>
 
 
 
-                </div>
               </div>
+            </div>
           </div>
         </>
       ) : null}
